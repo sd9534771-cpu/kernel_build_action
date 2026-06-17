@@ -15,10 +15,10 @@ jobs:
       - name: Build Kernel
         uses: dabao1955/kernel_build_action@main
         with:
-          kernel-url: https://github.com/AcmeUI-Devices/android_kernel_xiaomi_cas
-          kernel-dir: msm-4.19
-          kernel-branch: taffy
-          config: cas_defconfig
+          kernel-url: https://github.com/Motorola/android_kernel_motorola_sm6150
+          kernel-dir: hanoip 
+          kernel-branch: user-sm6150-Android11
+          config: hanoip_defconfig
           arch: arm64
           aosp-gcc: true
           aosp-clang: true
@@ -27,4 +27,6 @@ jobs:
           android-version: 12
           aosp-clang-version: r383902
           disable-lto: true
-          anykernel3: true
+          anykernel3: true 
+          extra-cmd: CONFIG_CFG80211_WEXT=y CONFIG_DEVMEM=y CONFIG_USB_NET_RNDIS=y CONFIG_MAC80211=y
+          
