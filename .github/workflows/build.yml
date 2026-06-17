@@ -15,9 +15,9 @@ jobs:
       - name: Build Kernel
         uses: dabao1955/kernel_build_action@main
         with:
-          kernel-url: https://github.com/LineageOS/android_kernel_motorola_sm6150.git
+          kernel-url: https://github.com/YuuA2/android_kernel_motorola_sm6150.git
           kernel-dir: hanoip 
-          kernel-branch: lineage-18.1
+          kernel-branch: eleven
           config: hanoip_defconfig
           arch: arm64
           aosp-gcc: true
