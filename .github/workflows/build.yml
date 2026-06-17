@@ -15,9 +15,9 @@ jobs:
       - name: Build Kernel
         uses: dabao1955/kernel_build_action@main
         with:
-          kernel-url: https://github.com/Motorola/android_kernel_motorola_sm6150
+          kernel-url: https://github.com/Motorola/android_kernel_motorola_sm6150.git
           kernel-dir: hanoip 
-          kernel-branch: user-sm6150-Android11
+          kernel-branch: master
           config: hanoip_defconfig
           arch: arm64
           aosp-gcc: true
@@ -28,5 +28,7 @@ jobs:
           aosp-clang-version: r383902
           disable-lto: true
           anykernel3: true 
-          extra-cmd: CONFIG_CFG80211_WEXT=y CONFIG_DEVMEM=y CONFIG_USB_NET_RNDIS=y CONFIG_MAC80211=y
+          
+    
+    
           
